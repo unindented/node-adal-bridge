@@ -1,0 +1,27 @@
+{
+  "name": "adal-bridge",
+  "description": "Integration with native Azure Active Directory authentication libraries.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/unindented/node-adal-bridge.git"
+  },
+  "main": "src/main.js",
+  "bin": {
+    "adal-bridge": "src/cli.js"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "bindings": "^1.0.0",
+    "joi": "^10.0.0",
+    "nan": "^2.0.0",
+    "yargs": "^6.4.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}

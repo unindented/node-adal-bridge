@@ -1,0 +1,26 @@
+os: osx
+osx_image: xcode8.1
+language: cpp
+
+env:
+  - TRAVIS_NODE_VERSION="6"
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+
+install:
+  - rm -rf ~/.nvm
+  - git clone https://github.com/creationix/nvm.git ~/.nvm
+  - source ~/.nvm/nvm.sh
+  - nvm install $TRAVIS_NODE_VERSION
+  - PATH="`npm bin`:`npm bin -g`:$PATH"
+  - npm install
+
+script:
+  - node --version
+  - npm --version
+  - npm test
